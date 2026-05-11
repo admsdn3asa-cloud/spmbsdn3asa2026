@@ -41,6 +41,10 @@ const DEFAULT_FORM_FIELDS = [
   { id: "Foto Siswa", label: "Pas Foto 3x4", type: "file", required: true },
   { id: "Kartu Keluarga", label: "Kartu Keluarga", type: "file", required: true },
   { id: "Akta Kelahiran", label: "Akta Kelahiran", type: "file", required: true },
+  { id: "Tinggi Badan", label: "Tinggi Badan", type: "text", required: true},
+  { id: "Berat Badan", label: "berat Badan", type: "text", required: true},
+  { id: "Cita-cita", label: "Cita-cita", type: "text", required: true},
+  { id: "Hobi", label: "Hobi", type: "text", required: true}
 ];
 
 const DEFAULT_SETTINGS = {
@@ -72,7 +76,7 @@ function setup() {
   if (!adminSheet) {
     adminSheet = ss.insertSheet(ADMIN_SHEET_NAME);
     adminSheet.appendRow(["Username", "Password"]);
-    adminSheet.appendRow(["admin", "admin123"]); // Default credentials
+    adminSheet.appendRow(["admin", "opsdigital"]); // Default credentials
     adminSheet.getRange(1, 1, 1, 2).setFontWeight("bold").setBackground("#e0e0e0");
   }
 
